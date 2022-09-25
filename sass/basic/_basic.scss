@@ -1,0 +1,33 @@
+// Basic
+body {
+	padding-top: 132px;
+	font-weight: 400;
+	font-family: 'Pontano Sans', sans-serif;
+	@media screen and (max-width:991px) {
+		&.hidden {
+			overflow: hidden;
+		}
+	}	
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Pontano Sans', sans-serif;
+	color: $text_black;
+}
+
+input,
+button,
+p,
+a {
+	font-size: 16px;
+	font-family: 'Pontano Sans', sans-serif;
+	color: $text_black;
+}
+a {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
+	&:hover {
+		color: $text_black;
+	}
+}

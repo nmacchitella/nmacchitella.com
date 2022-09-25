@@ -1,0 +1,205 @@
+// Navigation
+.nav-mobile,
+.navigation {
+    display: block;
+    height: 132px;    
+    width: 100%;
+    background: $bg_white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s;   
+    z-index: 9; 
+    &__container  {
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1630px;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.nav-mobile {
+    display: none;
+}
+@media screen and (max-width:991px) {
+    .navigation {    
+        height: 0;
+        overflow: hidden;
+        .navigation__container {
+            flex-direction: column;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .navigation__logo {
+            display: none;
+        }
+        .navigation__menu,
+        .navigation__social {
+            width: 100%;
+        }
+        .navigation__social {
+            justify-content: center;
+            a {
+                margin-left: 15px;
+                margin-right: 15px;
+                width: 30px;
+                height: 30px;
+                &.navigation__social-link_imbd {
+                    margin-top: 0;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+        .navigation__menu-ul {   
+            min-width: 240px;
+            flex-direction: column;
+            li {
+                margin-right: 0;
+                width: 100%;
+                height: 60px;
+                a {                
+                    display: inline-block;
+                    text-align: center;
+                    width: 100%;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    .navigation.show {
+        display: block;
+        top: 100px !important;
+        height: calc(100% - 100px);
+        overflow: auto;        
+    }
+    .nav-mobile {
+        display: none;
+        height: 100px;
+        padding-right: 4vw;
+        padding-left: 4vw;
+        @media screen and (max-width:991px) {
+            display: block;
+        }
+        &__hamburger {
+            transition: 0.3s all;
+            height: 35px;
+            width: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            span {
+                transition: 0.3s all;
+                margin: 5px 0;
+                background: #808080;
+                width: 100%;
+                height: 2px;
+            }
+            &.open {
+                transform: rotate(45deg);
+                position: relative;
+                span {
+                    margin: 0;
+                }
+                span:first-child {
+                    position: absolute;
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+}
+
+// Menu
+.navigation__menu {
+    width: calc(50% - 140px);
+    &-ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        li {            
+            margin-right: 1.2vw;
+            a {
+                font-size: 15px;
+                text-decoration: none;
+            }
+            &.active {
+                a {
+                    text-decoration: underline;
+                    text-underline-offset: 0.4em;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+// Logo
+.navigation__logo {
+    &-link {
+        font-size: 40px;
+        text-decoration: none;
+        font-family: 'Abel', sans-serif;
+        @media screen and (max-width:991px) {
+            font-size: 32px;
+        }
+        @media screen and (max-width:400px) {
+            font-size: 28px;
+        }
+    }
+}
+
+// Social
+.navigation__social {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(50% - 140px);
+
+    &-link {
+        display: flex;
+        align-items: center;
+        margin-left: 1.5vw;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        box-sizing: content-box;
+        line-height: 1;
+        img {
+            width: 100%;
+        }
+        &_imbd {
+            margin-top: 2px;
+            width: 30px;
+        }
+    }
+
+}
+
+
+// END Menu
+
+/* Adaptive */
+
+@media screen and (max-width:1400px) {
+    
+}
+
+@media screen and (max-width:1199px) {
+    
+}
+
+@media screen and (max-width:991px) {
+    
+}
+
+// END Navigation

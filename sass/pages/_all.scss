@@ -1,0 +1,236 @@
+// Home
+.home-avatar {
+    padding-top: 6.6vmax;
+    padding-bottom: 6.6vmax;
+
+    // Avatar
+    &__avatar {
+        max-width: 510px;
+        width: 100%;
+    }
+}
+
+// Product 
+.product {
+    padding-top: 6.6vmax;
+    padding-bottom: 6.6vmax;
+
+    // Title 
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        @media screen and (max-width:991px) {
+            font-size: 20px;
+        }
+    }
+    &__title,
+    &__text {
+        max-width: 1330px;
+    }
+
+    // Img
+    &__img {
+        margin-top: 130px;
+        max-width: 1071px;
+        width: 100%;
+        @media screen and (max-width:991px) {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+// Content 
+.content {
+    padding-top: 6.6vmax;
+    padding-bottom: 6.6vmax;
+
+    // Title & text
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        @media screen and (max-width:991px) {
+            font-size: 20px;
+        }
+    }
+    &__title,
+    &__text {
+        max-width: 1200px;
+    }
+    &__text {
+        &:last-child {
+            margin-bottom: 80px;
+            @media screen and (max-width:991px) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    // Card
+    &__card {
+        display: flex;
+        position: relative;
+        margin-bottom: 24px;
+        &:hover {
+            .content__card-name {
+                opacity: 1;
+            }
+        }
+    }
+    &__card-img {
+        width: 100%;
+    }
+    &__card-name {
+        transition: 0.3s all;
+        opacity: 0;
+        background: rgba(0,0,0,.7);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 17px;
+        p {
+            margin-top: 16px;
+            color: #bbbbbb;
+            text-decoration: underline;
+        }
+    }    
+}
+
+// Bio
+.bio {
+    padding-top: 6.6vmax;
+    padding-bottom: 6.6vmax;
+
+    // Title & text
+    &__text {
+        margin-bottom: 22px;
+    }
+
+    // Avatar
+    &__avatar {
+        display: block;
+        max-width: 240px;
+        width: 100%;
+        margin-left: auto;
+        @media screen and (max-width:991px) {
+            margin-right: auto;
+            max-width: 300px;
+        }
+    }    
+}
+// Bio Gallery
+.bio-gallery {
+    margin-bottom: 40px;
+    @media screen and (max-width:991px) {
+        margin-bottom: 0;
+    }
+    &__gallery {
+        display: grid;
+        padding: 3vw;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 0.85vw;
+        grid-row-gap: 0.85vw;
+        width: auto;
+        @media screen and (max-width:1199px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @media screen and (max-width:991px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width:480px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    &__gallery-item {
+        padding-bottom: 100%;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 0;
+        img {
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-position: 50% 50%;
+            object-fit: cover;
+        }
+    }
+}
+
+// Resume
+.resume {
+    padding-top: 6.6vmax;
+    padding-bottom: 4vmax;
+
+    // Title & text
+    &__title {
+        margin-top: 32px;
+        margin-bottom: 32px;        
+        font-size: 26px;
+        &:first-child {
+            margin-top: 0;
+        }
+        a {
+            font-size: 26px;
+        }
+        &_top {
+            @media screen and (max-width:991px) {
+                margin-top: 32px !important;
+            } 
+        }
+    }
+    &__text {
+        line-height: 1.7;
+        margin: 16px 0;
+        &_bottom {
+            margin-bottom: 32px;
+        }
+        .bold {            
+            font-weight: bold;
+        }
+        .company {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+    }
+    &__text-top {
+        display: inline-block;
+        width: 100%;
+        .date {
+            float: right;
+            @media screen and (max-width:1199px) {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                float: none;
+                display: inline-block;
+                width: 100%;
+            }
+        }        
+    }
+
+}
+.press {
+    padding-bottom: 6.6vmax;
+
+    // Title
+    &__title {
+        text-align: center;
+        font-size: 26px;
+        margin-bottom: 34px;
+    }
+
+    // Card
+    &__card {
+        margin-bottom: 34px;
+    }
+    &__card-img {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 16px;
+    }
+}
